@@ -1,4 +1,6 @@
-## Bash script behaving like a development v version running/compiling v files using imported modules both in official version and development version
+## vdev.sh script: a development v version
+
+Bash script behaving like a development `v` version running/compiling `v` files using imported modules in official version or development version
 
 ### Installation and configuration
 
