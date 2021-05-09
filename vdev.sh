@@ -2,6 +2,9 @@
 
 VEXE="${HOME}/vlang/v/v"
 VDEVMODULES="${HOME}/vdevmodules"
+if [ "$USERPROFILE" != "" ]; then
+    VDEVMODULES="${USERPROFILE/\\/\/}/vdevmodules"
+fi
 VRUNDIR="${HOME}/.vmodules/"
 
 VPATH=""
