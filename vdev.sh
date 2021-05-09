@@ -11,7 +11,7 @@ VPATH=""
 
 if [ "$1" = "-dev" ]; then
     shift
-    VPATH="-path @vlib:${VDEVMODULES}:@vmodules"
+    VPATH="-path @vlib|${VDEVMODULES}|@vmodules"
     VRUNDIR="${VDEVMODULES}/"
 fi 
 
