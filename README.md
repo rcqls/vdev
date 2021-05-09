@@ -19,7 +19,7 @@
 * `~/vdevmodules/` in devel mode, i.e. with `-dev` option 
 ### Use case
 
-1. `v install ui` # official v ui module installed inside `~/.vmodules/ui`
-1. `cd ~/vdevmodules;git clone -b devel12 https://github.com/rcqls/ui` # rcqls/devel12 branch of v ui installed inside `~/vdevmodules/ui`.
-1. `v run %ui/examples/users_resizable.v`
-1. `v -dev run %ui/examples/users_resizable.v`
+Here it is supposed that `~/bin/v` is the symlink of `vdev.sh` and `~/bin` part of `$PATH` such that `type v` is `~/bin/v`. After installing official version `ui` (`v install ui`) and a development version of `ui` inside `~/vdevmodules` (`cd ~/vdevmodules;git clone -b devel12 https://github.com/rcqls/ui`). You can then run `ui/examples/users_resizable.v` in the two modes: 
+
+1. **normal mode**: `v run %ui/examples/users_resizable.v` (equivalent to `v run ~/.vmodules/ui/examples/users_resizable.v`) using the official `ui` module inside `~/.vmodules`
+1. **development mode**: `v -dev run %ui/examples/users_resizable.v` (equivalent to `v -dev run ~/vdevmodules/ui/examples/users_resizable.v`) using the development module `~/vdevmodules`.
