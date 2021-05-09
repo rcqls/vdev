@@ -23,3 +23,6 @@ Here it is supposed that `~/bin/v` is the symlink of `vdev.sh` and `~/bin` part 
 
 1. **normal mode**: `v run %ui/examples/users_resizable.v` (equivalent to `v run ~/.vmodules/ui/examples/users_resizable.v`) using the official `ui` module inside `~/.vmodules`
 1. **development mode**: `v -dev run %ui/examples/users_resizable.v` (equivalent to `v -dev run ~/vdevmodules/ui/examples/users_resizable.v`) using the development module `~/vdevmodules`.
+
+
+**Remark**: tested on macOS, linux and Windows10 (using GitBash)
