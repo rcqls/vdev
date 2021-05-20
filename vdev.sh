@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
 VEXE="${HOME}/vlang/v/v"
+
+if [ "$1" = "-v" ]; then
+    shift
+    if [ -e "$1" ]; then
+        VEXE="$1"
+    fi
+    shift
+fi
+
 VDEVMODULES="${HOME}/vdevmodules"
 
 if [ "$USERPROFILE" != "" ]; then
