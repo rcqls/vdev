@@ -10,6 +10,12 @@ if [ "$1" = "-v" ]; then
     shift
 fi
 
+VDEFARGS=""
+CFG="${HOME}/vlang/.vdev"
+if [ -e "$CFG" ]; then
+    VDEFARGS=`cat $CFG`
+fi
+
 VDEVMODULES="${HOME}/vdevmodules"
 
 if [ "$USERPROFILE" != "" ]; then
@@ -27,4 +33,4 @@ fi
 
 VARGS="$*"
 
-${VEXE} ${VPATH}  ${VARGS/\%/${VRUNDIR}}
+${VEXE} ${VPATH} ${VDEFARGS}  ${VARGS/\%/${VRUNDIR}}
